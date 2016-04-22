@@ -1,0 +1,15 @@
+{% extends "ArticleBundle::layout.html.twig" %}
+{% block testplatform_body %}
+ {{ include("ArticleBundle:Article:form.html.twig") }}
+
+<div class="well">
+  {{ form(form) }}
+</div>
+
+  <p>
+    <a href="{{ path('article_homepage') }}" class="btn btn-default">
+      <i class="glyphicon glyphicon-chevron-left"></i>
+      Retour à l'accueil
+    </a>
+  </p>
+{% endblock %}

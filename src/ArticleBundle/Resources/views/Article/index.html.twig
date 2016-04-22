@@ -1,0 +1,21 @@
+{% extends "ArticleBundle::layout.html.twig" %}
+{% block testplatform_body %}
+  <ul>
+    {% for article in listArticle %}
+      <li>
+        <a href="{{ path('article_view', {'id': article.id}) }}">
+          {{ article.title }}
+        </a>
+        par {{ article.author }},
+        le {{ article.date|date('d/m/Y') }}
+		  <p>
+			<a href="{{ path('article_tag', {'tag': article.tag}) }}">
+				{{ article.tag }}
+			</a>
+		  </p>
+      </li>
+    {% else %}
+      <li>Pas (encore !) d'annonces</li>s
+    {% endfor %}
+  </ul>
+{% endblock %}

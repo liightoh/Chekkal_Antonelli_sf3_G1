@@ -1,0 +1,23 @@
+article_homepage:
+    path:    /
+    defaults: { _controller:ArticleBundle:Article:index }
+
+article_view:
+    path:    /view/{id}
+    defaults: { _controller: ArticleBundle:Article:view }
+    requirements: 
+        id: \d+
+
+article_edit:
+    path:    /edit/{id}
+    defaults: { _controller: ArticleBundle:Article:edit }
+    requirements: 
+        id: \d+
+
+article_add:
+    path:    /add
+    defaults: { _controller: ArticleBundle:Article:add }
+
+article_tag:
+    path:    /tag/{tag}
+    defaults: { _controller: ArticleBundle:Article:tag }
